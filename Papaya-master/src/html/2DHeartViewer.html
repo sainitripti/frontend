@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/sidebar/navigation-sidebar.css" />
+    <link rel="stylesheet" type="text/css" href="../../release/current/standard/papaya.css" />
+    <script type="text/javascript" src="../../release/current/standard/papaya.js"></script>
+    
+    <title>2D Heart Viewer</title>
+</head>
+
+<body style="background-color: #222;">
+    <ul class="sidebar">
+        <a href="./2DHeartViewer.html">Cardiac Viewer</a>
+        <a href="./CineImage.html">Cine Image</a>
+        <a href="./3DHeartBeatingModel.html">3D Heart Beating Model</a>
+        <a href="./VolumeRendering.html">Volume Rendering</a>
+    </ul>
+    <div id="papaya-container" style="width: 600px; margin: auto;">
+        <div class="papaya"></div>
+    </div>
+    
+    <button id="preview-segmentation"> Preview Segmentation</button>
+
+    <script type="text/javascript">
+        var params = [];
+        document.getElementById("preview-segmentation").addEventListener("click",
+        function previewSegmentation()
+        {
+            params["images"] = ["http://localhost:5000/training_axial_full_pat0.nii.gz","http://localhost:5000/training_axial_full_pat0-label.nii.gz"];
+            
+            var newViewer = document.createElement('div');
+            newViewer.classList.add("papaya");
+            newViewer.setAttribute("data-params", "params");
+
+            var oldViewer = document.getElementById("papaya-container").firstElementChild;
+            
+            document.getElementById("papaya-container").removeChild(oldViewer);
+            document.getElementById("papaya-container").appendChild(newViewer);
+            console.log("set");
+        });
+        
+    </script>
+    
+</body>
+
+</html>

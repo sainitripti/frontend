@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>3D heart beating model</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/sidebar/navigation-sidebar.css">
+		<link rel="stylesheet" href="../css/3DHeartBeatingModel/3dheart.css">
+
+	</head>
+	<body>
+		<ul class="sidebar">
+		    <a href="./2DHeartViewer.html">Cardiac Viewer</a>
+			<a href="./CineImage.html">Cine Image</a>
+            <a href="./3DHeartBeatingModel.html">3D Heart Beating Model</a>
+            <a href="./VolumeRendering.html">Volume Rendering</a>
+		</ul>
+		<div id="reference-image">
+			<img src="https://ghcdn.rawgit.org/sainitripti/visualiser/master/data/heart-reference-image.PNG" width="210px"/>
+		</div>
+
+		<div id="r3d">
+			
+		</div>
+
+		<div class="heart-controller-container" >
+			<div id="heart-controller">
+
+			</div>
+			<div>
+				<h4>Patient Data:</h4>
+				<table class="patient-data-table">
+					<tbody>
+					<tr>
+						<td>age</td>
+						<td>63</td>
+					</tr>
+					<tr>
+						<td>sex</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>cp</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>trestbps</td>
+						<td>145</td>
+					</tr>
+					<tr>
+						<td>chol</td>
+						<td>233</td>
+					</tr>
+					<tr>
+						<td>fbs</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>restecg</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>thalach</td>
+						<td>150</td>
+					</tr>
+					<tr>
+						<td>exang</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>oldpeak</td>
+						<td>2.3</td>
+					</tr>
+					<tr>
+						<td>slope</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>ca</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>thal</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>target</td>
+						<td>1</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div> 
+		
+        <script type="module" src="http://localhost:5000/js/3dheartbeatingmodel.js"></script>
+		
+	</body>
+</html>
