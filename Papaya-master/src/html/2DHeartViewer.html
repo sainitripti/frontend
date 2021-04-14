@@ -16,7 +16,7 @@
     <title>2D Heart Viewer</title>
 </head>
 
-<body style="background-color: #222;">
+<body style="background-color: #222; text-align: center;">
     <ul class="sidebar">
         <a href="./2DHeartViewer.html">Cardiac Viewer</a>
         <a href="./CineImage.html">Cine Image</a>
@@ -35,16 +35,6 @@
         function previewSegmentation()
         {
             params["images"] = ["http://localhost:5000/training_axial_full_pat0.nii.gz","http://localhost:5000/training_axial_full_pat0-label.nii.gz"];
-            
-            var newViewer = document.createElement('div');
-            newViewer.classList.add("papaya");
-            newViewer.setAttribute("data-params", "params");
-
-            var oldViewer = document.getElementById("papaya-container").firstElementChild;
-            
-            document.getElementById("papaya-container").removeChild(oldViewer);
-            document.getElementById("papaya-container").appendChild(newViewer);
-            console.log("set");
         });
         
     </script>
