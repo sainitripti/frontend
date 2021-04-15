@@ -14,6 +14,10 @@
     <script type="text/javascript" src="../../release/current/standard/papaya.js"></script>
     
     <title>2D Heart Viewer</title>
+    <script type="text/javascript">
+        var params = [];   
+        params["images"] = ["http://localhost:5000/training_axial_full_pat0.nii.gz","http://localhost:5000/training_axial_full_pat0-label.nii.gz"];    
+    </script>
 </head>
 
 <body style="background-color: #222; text-align: center;">
@@ -24,20 +28,8 @@
         <a href="./VolumeRendering.html">Volume Rendering</a>
     </ul>
     <div id="papaya-container" style="width: 600px; margin: auto;">
-        <div class="papaya"></div>
+        <div class="papaya" data-params="params"></div>
     </div>
-    
-    <button id="preview-segmentation"> Preview Segmentation</button>
-
-    <script type="text/javascript">
-        var params = [];
-        document.getElementById("preview-segmentation").addEventListener("click",
-        function previewSegmentation()
-        {
-            params["images"] = ["http://localhost:5000/training_axial_full_pat0.nii.gz","http://localhost:5000/training_axial_full_pat0-label.nii.gz"];
-        });
-        
-    </script>
     
 </body>
 
